@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: white;
+    color: black;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px green;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: black;
+}
+
+section{
+    margin: 20px 0;
+}
+
+.clientes , .pets{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cliente , .pet {
+    width: 200px;
+    padding: 10px;
+    background-color: blueviolet;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px gray;
+    text-align: center;
+}
+
+.cliente img , .pet img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.informacoes p{
+    margin: 5px 0;
+}
+
+
+.btn-prontuario{
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: blanchedalmond;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.agendameto , .perfil{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.agendameto p{
+    margin-bottom: 10px;
+}
+
+.botoes{
+    display: flex;
+    gap: 10px;
+}
+
+button{
+    padding: 10px;
+    background-color: aqua;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+button:hover{
+    background-color: blanchedalmond;
+}
+
+

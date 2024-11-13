@@ -1,0 +1,122 @@
+
+body{
+
+background: linear-gradient(to top,#FDFD96,#FFCC59);
+/*define um gradiente linear. to top(do topo p baixo) , to right(seria da esquerda p direita) e etc.*/
+
+background-size: cover;
+
+/*cover,para garantir que o gradiente ocupe toda a tela*/
+
+background-attachment: fixed;
+
+/*para que o fundo fique fixo durante o scroll do mouse*/
+
+margin: 0;
+
+/*remove margens padrao */
+
+padding: 0;
+
+/*remove o padding */
+
+font-weight: normal;  /*deixar em negrito*/
+
+color: #23448e;
+
+}
+
+/* se eu quiser um gradiente em forma de circulo uso - radial-gradiente.*/
+
+/*     */
+
+/*     */
+
+
+header{
+    background-color:#F6A50F;
+    padding: 10px;
+    text-decoration: none;  /*remover o sublinhado dos links*/ 
+}
+
+ul{
+
+    display: flex; /*alinhar na horizontal*/
+    justify-content: space-between; /*espaços igual entre itens*/
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:#23448e;
+    font-size: 24px;
+    font-weight: normal;
+
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+
+
+.icone{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #F6A50F;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.icone img {
+    position: absolute;
+    top: 10%;
+    left: 9%;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+   
+}
+
+.icone h2 {
+    position: absolute;
+    top: 55%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    color:#23448e;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+   
+}
+
+.opcoes-cadastro{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button{
+    padding: 10px 80px;
+    font-size: 20px;
+    background-color: #F6A50F;
+    color: #23448e;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    
+}

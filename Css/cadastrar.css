@@ -1,0 +1,151 @@
+
+body{
+
+    background: linear-gradient(to top,#688bec,#8dc6ae);
+    /*define um gradiente linear. to top(do topo p baixo) , to right(seria da esquerda p direita) e etc.*/
+    
+    background-size: cover;
+    
+    /*cover,para garantir que o gradiente ocupe toda a tela*/
+    
+    background-attachment: fixed;
+    
+    /*para que o fundo fique fixo durante o scroll do mouse*/
+    
+    margin: 0;
+    
+    /*remove margens padrao */
+    
+    padding: 0;
+    
+    /*remove o padding */
+    
+    font-weight: normal;  /*deixar em negrito*/
+    
+    
+    }
+ 
+
+.voltar {
+    max-width: 60px;
+    bottom: 50px;
+    right:  420px;
+    width: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.form-cadastro{
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px gray;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+
+}
+
+h2 , h3{
+    text-align: center;
+    color: #8dc6ae;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #8dc6ae;
+}
+
+
+input [type="text"]
+input [type="email"]
+input [type="password"]
+input [type="tel"]
+input [type="date"]{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1 px solid gray;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+
+input [type="text"]:focus,
+input [type="email"]:focus,
+input [type="password"]:focus,
+input [type="tel"]:focus,
+input [type="date"]:focus{ 
+    border-color: #8dc6ae;
+    outline: none;
+
+}
+
+input [type="checkbox"],
+input [type="radio"] {
+     margin-right: 8px;
+}
+
+button{
+    background-color:#688bec;
+    color:#8dc6ae ;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition:background-color 0.3s;
+    margin-top: 10px;
+    font-weight:bold;
+}
+
+button:hover{
+    background-color: gray;
+}
+
+.form-info label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-info input ,
+.form-info button {
+    width: 100%;
+}
+
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.checkbox-container label{
+   font-size: 14px;
+    margin-left: 8px;
+}
+
+
+

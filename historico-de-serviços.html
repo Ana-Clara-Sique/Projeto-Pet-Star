@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang ="pt-Br">
+<head>
+ <meta charset ="UTF-8">
+ <meta name="viewport" content="width = device-width,initial-scale=1.0">
+ <title>Històrico de Serviços - Pet Star</title>
+ <link rel="stylesheet" href="Css/historico-servicos.css">
+</head>
+<body>
+
+    <div class="tabela">
+
+    <header> <h1>Històrico de Serviços Realizados</h1></header>
+
+
+    <section class="tabela-historico">
+        <table>
+           <thead>
+                
+              <tr>
+                 <th>Data</th>
+                 <th>Valor</th>
+                 <th>Serviço</th>
+                 <th>Animal (Pet)</th>
+                 <th>Veterinário</th>
+                 <th>Ações</th>
+              </tr>
+           </thead>
+           <tbody>
+               <tr>
+                 <td>10/11/2024</td>
+                 <td>R$ 100,00</td>
+                 <td>Banho e tosa</td>
+                 <td>Rex (Cachorro)</td>
+                 <td>Dra.Vivian</td>
+                 <td>
+                    <button class="btn-editar"  onclick="editarServiço(this)">Editar</button>
+                    <button class="btn-excluir" onclick="excluirServiço(this)">Excluir</button>
+
+                 </td>
+               </tr>
+
+               <tr>
+                <td>09/11/2024</td>
+                <td>R$ 120,00</td>
+                <td>Consulta vetrinaria</td>
+                <td>Mia (Gato)</td>
+                <td>Dra.Yasmin Pinheiro</td>
+                <td>
+                    <button class="btn-editar"  onclick="editarServiço(this)">Editar</button>
+                    <button class="btn-excluir" onclick="excluirServiço(this)">Excluir</button>
+
+                 </td>
+              </tr>
+
+              <tr>
+                <td>07/11/2024</td>
+                <td>R$ 80,00</td>
+                <td>Vacinaçâo</td>
+                <td>Bob (Cachorro)</td>
+                <td>Dr. Jonas Oliveira</td>
+                <td>
+                    <button class="btn-editar"  onclick="editarServiço(this)">Editar</button>
+                    <button class="btn-excluir" onclick="excluirServiço(this)">Excluir</button>
+
+                 </td>
+              </tr>
+
+              <tr>
+                <td>05/11/2024</td>
+                <td>R$ 90,00</td>
+                <td>Exame de sangue</td>
+                <td>Lili (Coelho)</td>
+                <td>Dra. Julianna Costa</td>
+                <td>
+                    <button class="btn-editar"  onclick="editarServiço(this)">Editar</button>
+                    <button class="btn-excluir" onclick="excluirServiço(this)">Excluir</button>
+
+                 </td>
+              </tr>
+
+              <tr>
+                <td>03/11/2024</td>
+                <td>R$ 50,00</td>
+                <td>Banho e Tosa</td>
+                <td>Simba (Gato)</td>
+                <td>Dr. Ricardo Mendes</td>
+                <td>
+                    <button class="btn-editar"  onclick="editarServiço(this)">Editar</button>
+                    <button class="btn-excluir" onclick="excluirServiço(this)">Excluir</button>
+                 </td>
+              </tr>
+      
+              
+              <tr>
+                <td>01/11/2024</td>
+                <td>R$ 200,00</td>
+                <td>Consulta + Cirurgia</td>
+                <td>Caramelo (Cachorro)</td>
+                <td>Dr. João Silva </td>
+                <td>
+                    <button class="btn-editar"  onclick="editarServiço(this)">Editar</button>
+                    <button class="btn-excluir" onclick="excluirServiço(this)">Excluir</button>
+                 </td>
+              </tr>
+           </tbody>
+        </table>
+    </section>
+    </div>
+
+    <script src="Js/historico-serviços.js"></script>
+</body>
+</html>

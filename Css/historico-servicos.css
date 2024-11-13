@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    color: black;
+}
+
+
+.tabela {
+    width: 80%;
+    margin-top: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow:  0 4px 10px gray;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #629a83;
+}
+
+h1 {
+ font-size: 24px;
+ color: black;
+}
+
+.tabela-historico {
+    overflow: auto;
+}
+
+
+table{
+    width:100% ;
+    border-collapse:collapse;
+    margin-top: 20px;
+    background-color: #629a83;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px gray;
+}
+
+thead{
+    background-color: aquamarine;
+    color: gray;
+}
+   
+th , td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    font-size: 16px;
+}
+
+td{
+    font-size: 14px;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+
+td:nth-child(2) , th:nth-child(2) {
+    text-align: right;
+}
+
+
+button{
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin:  0 5px;
+    transition:  all 0.3s ease;
+}
+
+
+.btn-editar{
+    background-color: #629a83;
+    color: white;
+}
+
+.btn-editar:hover{
+    background-color: white;
+}
+
+.btn-excluir{
+    background-color: white;
+    color: black;
+}
+
+.btn-excluir:hover{
+    background-color: #629a83;
+}
+
+
+@media screen and (max-width:768px) {
+    table{
+        font-size: 12px;
+    }
+    th, td {
+        padding: 8px;
+    }
+}

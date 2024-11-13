@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang ="pt-Br">
+<head>
+ <meta charset ="UTF-8">
+ <meta name="viewport" content="width = device-width,initial-scale=1.0">
+ <title>Star Pet</title>
+ <link rel="stylesheet" href="Css/cadastrar.css">
+</head>
+<body>
+
+<header>
+   
+    <a href="index.html">
+        <img src="Img/voltar.png" class="voltar"> 
+  
+      </a>
+
+</header>
+
+<main>
+   
+    <div class="form-cadastro">
+
+
+        <form>
+            <h2>Cadastro de Veterinário</h2>
+
+           <div class="form-info">
+
+            <label for="campo-nome">Nome Completo:</label>
+            <input id="campo-nome" type="text" placeholder="digite seu usuário" required>
+
+           </div><br><br>
+    
+    
+            <div class="form-info">
+                <label for="campo-data">Data de nascimento:</label>
+                <input id="campo-data" type="date" placeholder="digite sua data de nascimento" required>
+
+            </div><br><br>
+           
+
+            <div class="checkbox-container">
+                <label>Gênero:</label><br><br>
+                <input type="radio"  id="masculino" name="genero" value="masculino">
+                <label for="masculino">Masculino</label><br>
+    
+                <input type="radio"  id="feminino" name="genero" value="feminino">
+                <label for="feminino">Feminino</label><br>
+    
+                <input type="radio"  id="outro" name="genero" value="outro">
+                <label for="outro">Outro</label>
+            
+            </div><br><br>
+    
+            <div class="form-info">
+                <label for="campo-email">Email:</label>
+                <input id="campo-email" type="email" placeholder="digite seu e-mail" required>
+
+            </div><br><br>
+    
+            <div class="form-info">
+                <label for="campo-telefone">Telefone:</label>
+                <input id="campo-telefone" type="tel" placeholder="(xx) xxxx-xxxx" required>
+
+            </div><br><br>
+    
+            <div class="form-info">  
+                <label for="campo-formacao">Formaçâo Acadêmica:</label>
+               <input id="campo-formacao" type="text" placeholder="digite sua formação acadêmica" required>
+            </div><br><br>
+    
+            <div class="form-info">  
+    
+               <label for="campo-especializacao">Especialização:</label>
+               <input id="campo-especializacao" type="text" placeholder="digite sua Especialização" required>
+            </div><br><br>
+
+
+            <div class="form-info">  
+               <label for="campo-senha">Senha:</label>
+               <input id="campo-senha" type="password" placeholder="Crie uma senha" required>
+            </div><br><br>
+
+            <div class="form-info">  
+                 <label for="confirme-senha"> Confirmar Senha:</labe>
+             <input id="confirme-senha" type="password" placeholder="Confirme sua senha" required>
+            </label>
+            </div><br><br>
+
+
+            <div class="checkbox-container">
+
+                <label for="termos">
+                    <input type="checkbox" id="termos" name="termos" required> Aceito os termos de uso
+               </label>
+                <br><br>
+
+            </div>
+
+            <h3>Observações:</h3>
+               <textarea rows="10" cols="30"></textarea> <br><br><br><br>
+
+
+    
+            <button type="submit">CONFIRMAR</button>
+       
+           </form>
+           <br><br><br><br>
+
+    </div>
+    
+
+</main>
+    
+
+</body>    
+</html>
+
+

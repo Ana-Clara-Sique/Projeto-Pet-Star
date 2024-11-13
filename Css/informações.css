@@ -1,0 +1,57 @@
+
+body{
+
+    
+    background: linear-gradient(to top,#FDFD96,#8DC6AE);
+    /*define um gradiente linear. to top(do topo p baixo) , to right(seria da esquerda p direita) e etc.*/
+    
+    background-size: cover;
+    
+    /*cover,para garantir que o gradiente ocupe toda a tela*/
+    
+    background-attachment: fixed;
+    
+    /*para que o fundo fique fixo durante o scroll do mouse*/
+    
+    display: flex;
+    height: 100vh;
+    margin: 0;
+
+    }
+
+
+.voltar {
+       max-width: 60px;
+       bottom: 250px;
+       right:  420px;
+       width: auto;
+   }
+
+.informacoes{
+    background-color: white;
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: grid;
+    place-items: center;
+    
+}
+
+p ,h2 {
+   margin: 20px 0;
+   color: #23449E;
+   background-color: #629a83;
+}
+
+
+main{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+   
+}

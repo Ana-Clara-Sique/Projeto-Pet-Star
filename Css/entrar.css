@@ -1,0 +1,122 @@
+
+body{
+
+    
+background: linear-gradient(to top,#FDFD96,#8DC6AE);
+/*define um gradiente linear. to top(do topo p baixo) , to right(seria da esquerda p direita) e etc.*/
+
+background-size: cover;
+
+/*cover,para garantir que o gradiente ocupe toda a tela*/
+
+background-attachment: fixed;
+
+/*para que o fundo fique fixo durante o scroll do mouse*/
+
+display: flex;
+height: 100vh;
+align-items: center;
+justify-content: center;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+
+
+/*  margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+
+
+
+header {
+ position: relative;
+ display:flex ;
+ justify-content: flex-start; /*alinha o conteudo a esquerda */
+ align-items: center;     /*alinha verticalmente*/
+ padding:10px;
+
+}
+
+.voltar{
+    position: relative;
+    max-width: 60px;
+    bottom: 250px;
+    right:  420px;
+    width: auto;
+}
+
+
+
+.form-entrar{
+   background-color: white;
+   padding: 70px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   border-radius: 8px;
+   width: 100%;
+   max-width: 400px;
+  
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #23449E;
+    background-color: #629A83;
+}
+
+.dados{
+   margin-bottom: 15px;
+
+}
+
+.dados label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color:#23449E ;
+}
+
+.dados input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #23449E;
+    background-color: #629A83;
+    border-radius: 4px;
+}
+
+.dados  input:focus {
+    border-color: white;
+    outline: none;
+}
+
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #629A83;
+    color:#23449E;
+    border:none;
+    border-radius: 4px;
+    cursor:pointer
+}
+
+
+button[type="submit"]:hover{
+    background-color: gray;
+}
+
+#erro-mensagem {
+    margin-top: 10px;
+    color: #23449E;
+    font-size: 14px;
+}
+

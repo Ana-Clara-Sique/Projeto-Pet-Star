@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang ="pt-Br">
+<head>
+ <meta charset ="UTF-8">
+ <meta name="viewport" content="width = device-width,initial-scale=1.0">
+ <title>Cadastro de tipo de serviço</title>
+ <link rel="stylesheet" href="Css/cadastro-servico.css">
+</head>
+<body>
+   
+   <div class="form-servico">
+     <h2>Cadastro De Serviço - Pet Star</h2>
+     <form action="#" method="POST">
+        <div class="form-group">
+        <label for="nome-servico">Nome Do Serviço:</label>
+        <input type="text" id="nome-servico" name="nome_servico" required>
+        </div> 
+
+        <div class="form-group">
+          <label for="descricao">Descriçâo Do Serviço:</label>  
+          <textarea id="descricao" name="descricao" rows="4" required></textarea>
+        </div> 
+
+       <div class="group-select">
+        <div class="form-group"> 
+            <label for="duracao">Duraçâo Estimada:</label>
+            <input type="text" id="duracao" name="duracao" required>
+         </div> 
+      
+         <div class="form-group">
+            <label for="tipo-animal">Tipo De Animal:</label>
+            <select id="tipo-animal" name="tipo-animal" required>
+               <option value="cao">Câo</option>
+               <option value="gato">Gato</option>
+               <option value="outro">Outro</option>
+            </select>
+         </div>
+       </div><br><br>
+
+       <div class="form-group">
+            <label for="preco">Preço Estimado (R$):</label>
+            <input type="number" id="preco" name="preco" min="0" step="0.01" required>
+       </div> <br><br>
+
+
+       <div class="form-group">
+          <label for="veterinario">Veterinàrio Responsàvel:</label>
+          <input type="text" id="veterinario" name="veterinario" required>
+       </div> <br><br>
+       
+       <div class="form-group">
+          <label for="observacoes">Observações Adicionais:</label> <br><br>
+          <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+       </div> <br><br>
+
+       <div class="form-group">
+           <label for="disponibilidade">Disponibilidade Do Serviço:</label>
+           <select id="disponibilidade" name="disponibilidade" required>
+              <option value="dias-semana">Durante a semana</option>
+              <option value="fim-semana">Fim De Semana</option>
+              <option value="urgente">Urgente</option>
+           </select>
+
+       </div> 
+         
+         <button type="submit" class="button">Cadastrar Serviço</button>
+
+
+
+
+
+     </form>
+   </div>
+
+
+
+
+
+
+
+
+
+</body>    

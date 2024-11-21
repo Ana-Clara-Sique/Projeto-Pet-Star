@@ -24,8 +24,9 @@ document.getElementById("login-form").addEventListener("submit",function(event){
 
     alert("login realizado com sucesso!");
 
-    if(camponome==validcamponome && camposenha ==validcamposenha){
-        window.location.href= "pagina-principal.html";
+    if(camponome == validcamponome && camposenha ==validcamposenha)
+        {
+        window.location.href= "pagina-principal-vet.html";
     
     }  else{
         erromensagem.textContent+"Usuario ou senha invalidos!";

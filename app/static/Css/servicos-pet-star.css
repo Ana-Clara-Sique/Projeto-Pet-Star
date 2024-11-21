@@ -1,0 +1,22 @@
+
+body{
+
+    
+    background: linear-gradient(to top,#FDFD96,#8DC6AE);
+    /*define um gradiente linear. to top(do topo p baixo) , to right(seria da esquerda p direita) e etc.*/
+    
+    background-size: cover;
+    
+    /*cover,para garantir que o gradiente ocupe toda a tela*/
+    
+    background-attachment: fixed;
+    
+    }
+
+.conteudo{
+    background-color: aliceblue;
+    text-align: center;
+   
+    }
+
+      

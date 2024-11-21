@@ -8,7 +8,7 @@
 
 // fechar o menu lateral //
   document.getElementById('fechar-menu').addEventListener('click',function(){
-    document.getElementById('menu-lateral').style.right ='250px';  // menu fechar//
+    document.getElementById('menu-lateral').style.right ='-250px';  // menu fechar//
     
   })
 

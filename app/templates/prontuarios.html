@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang ="pt-Br">
+<head>
+ <meta charset ="UTF-8">
+ <meta name="viewport" content="width = device-width,initial-scale=1.0">
+ <title>Prontuário</title>
+ <link rel="stylesheet" href="/app/static/Css/paginas-div.css">
+</head>
+<body>
+<div class="container">
+
+    <h1>Prontuário Do Pet </h1>
+
+
+  <form id="form-prontuario">
+
+  <div class="campo">
+    <label for="nome">Nome do animal:</label>
+    <input type="text" id="nome" name="nome" value="Fido" disabled>
+    <button type="button" class="editar-btn" onclick="habilitarEdicao('nome')">EDITAR</button>
+
+   </div>
+
+ <div class="campo">
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" value="5" disabled>
+    <button type="button" class="editar-btn" onclick="habilitarEdicao('idade')">EDITAR</button>
+
+   </div>
+
+ 
+<div class="campo">
+  <label for="especie">Espécie:</label>
+  <input type="text" id="especie" name="especie" value="Cachorro" disabled>
+  <button type="button" class="editar-btn" onclick="habilitarEdicao('especie')">EDITAR</button>
+
+ </div>
+ 
+ 
+<div class="campo">
+  <label for="raca">Raça:</label>
+  <input type="text" id="raca" name="raca" value="Labrador" disabled>
+  <button type="button" class="editar-btn" onclick="habilitarEdicao('raca')">EDITAR</button>
+
+ </div>
+
+ 
+<div class="campo">
+  <label for="situacao">Situação do animal:</label>
+  <input type="text" id="situacao" name="situacao" value="Saudável" disabled>
+  <button type="button" class="editar-btn" onclick="habilitarEdicao('situacao')">EDITAR</button>
+
+ </div>
+
+  
+<div class="campo">
+  <label for="medicamentos">Medicamentos Usados:</label> <br>
+  <textarea id="medicamentos" name="medicamentos" rows="8" disabled> anti-inflamatorio e antibiotico apos cirurgia. </textarea>
+  <button type="button" class="editar-btn" onclick="habilitarEdicao('medicamentos')">EDITAR</button>
+
+ </div>
+
+  
+<div class="campo">
+  <label for="resumo-servico">Resumo dos Serviços:</label>  <br>
+  <textarea id="resumo-servico" name="resumo-servico" rows="8" disabled>Cirurgia de castração realizada em 01/08/2024. </textarea>
+  <button type="button" class="editar-btn" onclick="habilitarEdicao('resumo-servico')">EDITAR</button>
+
+ </div>
+ 
+ 
+<div class="campo">
+  <label for="observacoes">Observações:</label>  <br>
+  <textarea id="observacoes" name="observacoes" rows="8" disabled> Não possui doenças cronicas.</textarea>
+  <button type="button" class="editar-btn" onclick="habilitarEdicao('observacoes')">EDITAR</button>
+
+ </div>
+ 
+ <button type="submit" id="salvar" class="salvar-btn" disabled>Salvar alterações</button>
+
+  </form>
+</div>
+
+
+
+<script src="/app/static/Js/prontuarios.js"></script>
+
+</body>
+</html>

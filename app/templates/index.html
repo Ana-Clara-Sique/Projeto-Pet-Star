@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang ="pt-Br">
+<head>
+ <meta charset ="UTF-8">
+ <meta name="viewport" content="width = device-width,initial-scale=1.0">
+ <title>Star Pet</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='Css/index.css') }}">
+</head>
+<body>
+
+<header>
+    <br>
+    
+    <ul>
+
+     <li>
+        <a href="" >LOJA</a>
+
+     </li>
+
+     <li>
+        <a href="servicos.html" >SERVIÇOS</a>
+        
+     </li>
+
+     <li>
+        <a href="contato.html" >CONTATO</a>
+        
+     </li>
+
+     <li>
+        <a href="Entrar.html" >ENTRAR</a>
+        
+     </li>
+
+
+
+    </ul>
+
+</header>
+
+
+
+<main>
+    
+    <br><br><br> 
+ <div class="icone">
+   <img src="{{ url_for('static', filename='Img/patinha1.png') }}" alt="Patinha">
+    <h2> PET STAR</h2>
+
+ </div> <br>
+
+
+
+
+
+ <div class="opcoes-cadastro">
+   
+    <a href=""><button>CADASTRAR PET</button> </a> 
+    <a href=""><button>CADASTRAR CLIENTE</button> </a> 
+    <a href=""><button>CADASTRAR USUÁRIO </button> </a> 
+    <a href="{{ url_for('cadastrar_veterinario') }}"><button>CADASTRAR VETERINÁRIO</button> </a>
+
+ </div>
+
+ 
+  
+
+</main>
+    
+<br><br><br>
+<br><br><br>
+
+</body>    
+</html>
+
+

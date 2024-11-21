@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color:#8dc6ae;
+    color: black;
+}
+
+.container {
+    width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color:whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px gray;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+section{
+    margin: 20px 0;
+}
+
+
+
+.clientes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cliente {
+    width: 200px;
+    padding: 10px;
+    background-color: #688bec;
+    border-radius: 8px;
+    box-shadow:#8dc6ae;
+    text-align: center;
+}
+
+
+.cliente img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+.pets{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.pet {
+    width: 200px;
+    padding: 10px;
+    background-color: #688bec;
+    border-radius: 8px;
+    box-shadow:#8dc6ae;
+    text-align: center;
+}
+
+ .pet img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.informacoes p{
+    margin: 5px 0;
+}
+
+
+.btn-prontuario{
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #23449E;
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.btn-cliente{
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #23449E;
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.agendameto , .prontuario {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.agendameto , .prontuario p{
+    margin-bottom: 10px;
+}
+
+.botoes{
+    display: flex;
+    gap: 10px;
+}
+
+button{
+    padding: 10px;
+    background-color: aqua;
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+button:hover{
+    background-color: #23449E;
+}
+
+
+.campo{
+    margin-bottom: 15px;
+  
+  }
+
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+input[type="text"], input[type=number],textarea{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #688bec;
+    font-size: 14px;
+}  
+
+.editar-btn{
+    margin-top:  5px;
+    background-color: #8dc6ae;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.editar-btn:hover{
+    background-color: #23449E;
+}
+
+.salvar-btn{
+    width: 100%;
+    background-color: #8dc6ae;
+    color: gray;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.salvar-btn:disabled{
+    background-color: #8dc6ae;
+    cursor: not-allowed;
+}

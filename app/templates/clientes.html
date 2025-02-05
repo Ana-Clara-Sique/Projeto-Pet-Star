@@ -4,7 +4,7 @@
  <meta charset ="UTF-8">
  <meta name="viewport" content="width = device-width,initial-scale=1.0">
  <title>Clientes cadastrados</title>
- <link rel="stylesheet" href="/app/static/Css/paginas-div.css">
+ <link rel="stylesheet" href="{{url_for('static', filename='Css/paginas-div.css' )}}">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
 
 <section class="clientes">
    <div class="cliente">
-    <img src="/app/static/Img/cliente-icone.png" alt="foto do cliente">
+   <img src="{{url_for('static', filename='Img/cliente-icone.png')}}" alt="foto do cliente">
     <div class="informações">
        <p><strong>Nome:</strong>João Silva</p>
        <p><strong>Gênero:</strong>Masculino</p>
@@ -26,14 +26,16 @@
        <p><strong>Pet:</strong>Rex (Cachorro)</p>
 
        
-       <a href="perfil-veterinario-.html" class="btn-cliente">Perfil</a>
+      
+       <a href="{{url_for('perfil-veterinario')}}" class="btn-cliente">Perfil</a>
        <!--Aqui mudar o href para a pagina de perfil do cliente-->
 
     </div>
    </div>
 
    <div class="cliente">
-   <img src="/app/static/Img/cliente-icone.png" alt="foto do cliente">
+   <img src="{{url_for('static', filename='Img/cliente-icone.png')}}" alt="foto do cliente">
+
     <div class="informações">
        <p><strong>Nome:</strong>Juliano Pereira</p>
        <p><strong>Gênero:</strong>Masculino</p>
@@ -42,14 +44,15 @@
        <p><strong>Endereço:</strong>Rua Novo horizonte ,123</p>
        <p><strong>Pet:</strong>Caramelo (Cachorro)</p>
 
-       <a href="perfil-veterinario-.html" class="btn-cliente">Perfil</a>
+       <a href="{{url_for('perfil-veterinario')}}" class="btn-cliente">Perfil</a>
        <!--Aqui mudar o href para a pagina de perfil do cliente-->
 
     </div>
    </div>
 
    <div class="cliente">
-   <img src="/app/static/Img/cliente-icone.png" alt="foto do cliente">
+   <img src="{{url_for('static', filename='Img/cliente-icone.png')}}" alt="foto do cliente">
+
     <div class="informações">
        <p><strong>Nome:</strong>Bianca Silva</p>
        <p><strong>Gênero:</strong>feminino</p>
@@ -59,14 +62,15 @@
        <p><strong>Pet:</strong>Mia (Gato)</p>
 
        
-       <a href="perfil-veterinario-.html" class="btn-cliente">Perfil</a>
+       <a href="{{url_for('perfil-veterinario')}}" class="btn-cliente">Perfil</a>
        <!--Aqui mudar o href para a pagina de perfil do cliente-->
 
     </div>
    </div>
 
    <div class="cliente">
-      <img src="/app/static/Img/cliente-icone.png" alt="foto do cliente">
+      <img src="{{url_for('static', filename='Img/cliente-icone.png')}}" alt="foto do cliente">
+
     <div class="informações">
        <p><strong>Nome:</strong>Pricilla Oliver </p>
        <p><strong>Gênero:</strong>feminino</p>
@@ -76,7 +80,7 @@
        <p><strong>Pet:</strong>Simba(Gato)</p>
 
        
-       <a href="perfil-veterinario-.html" class="btn-cliente">Perfil</a>
+       <a href="{{url_for('perfil-veterinario')}}" class="btn-cliente">Perfil</a>
        <!--Aqui mudar o href para a pagina de perfil do cliente-->
 
     </div>

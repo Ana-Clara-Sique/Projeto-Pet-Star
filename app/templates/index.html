@@ -4,7 +4,7 @@
  <meta charset ="UTF-8">
  <meta name="viewport" content="width = device-width,initial-scale=1.0">
  <title>Star Pet</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='Css/index.css') }}">
+ <link rel="stylesheet" href="{{ url_for('static', filename='Css/index.css') }}">
 </head>
 <body>
 
@@ -19,17 +19,17 @@
      </li>
 
      <li>
-        <a href="servicos.html" >SERVIÇOS</a>
+        <a href="{{ url_for('servicos') }}">SERVIÇOS</a>
         
      </li>
 
      <li>
-        <a href="contato.html" >CONTATO</a>
+        <a href="{{ url_for('contato') }}" >CONTATO</a>
         
      </li>
 
      <li>
-        <a href="Entrar.html" >ENTRAR</a>
+      <a href="{{url_for('entrar')}}">ENTRAR</a>
         
      </li>
 

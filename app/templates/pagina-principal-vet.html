@@ -4,7 +4,7 @@
  <meta charset ="UTF-8">
  <meta name="viewport" content="width = device-width,initial-scale=1.0">
  <title>Star Pet</title>
- <link rel="stylesheet" href="/app/static/Css/tela-principal.css">
+ <link rel="stylesheet" href="{{url_for('static', filename='Css/tela-principal.css' )}}">
 </head>
 
 <body>
@@ -18,17 +18,17 @@
    <ul>
 
      <li>
-        <a href="agendamentos.html" >AGENDAMENTOS</a>
+        <a href="{{url_for('agendamentos')}}">>AGENDAMENTOS</a>
 
      </li>
 
      <li>
-        <a href="pets.html" >PETS</a>
+        <a href="{{url_for('pets')}}" >PETS</a>
         
      </li>
 
      <li>
-        <a href="prontuarios.html" >PRONTUARIOS</a>
+        <a href="{{url_for('prontuarios')}}">PRONTUARIOS</a>
         
      </li>
 
@@ -45,21 +45,22 @@
 
     <ul>
       <li>
-         <a href="perfil-veterinario-.html" >PERFIL<a>
+         <a href="{{url_for('perfil-veterinario')}}" >PERFIL<a>
+            
          </li>
  
  
        <li>
-        <a href="clientes.html" >CLIENTES</a>
+        <a href="{{url_for('clientes')}}">CLIENTES</a>
         </li>
  
        <li>
-        <a href="cadastro-serviços.html" >CADASTRO DE SERVIÇOS</a>
+        <a href="{{url_for('cadastro-serviços')}}">CADASTRO DE SERVIÇOS</a>
        </li>
  
  
        <li>
-       <a href="historico-de-serviços.html" >HISTORICO DE SERVIÇOS</a>
+       <a href="{{url_for('historico-de-serviços')}}">HISTORICO DE SERVIÇOS</a>
        </li>
        
      </ul>
@@ -68,7 +69,8 @@
      <button id="fechar-menu" class="fechar-menu">Fechar</button>
    </div>
 
-   <script src="/app/static/Js/pagina-principal.js"></script> 
+   
+   <script src="{{url_for('static', filename='Js/pagina-principal.js' )}}"></script>
 
 </header>
 

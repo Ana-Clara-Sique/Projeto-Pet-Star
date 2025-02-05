@@ -4,7 +4,7 @@
  <meta charset ="UTF-8">
  <meta name="viewport" content="width = device-width,initial-scale=1.0">
  <title>Seu Perfil</title>
- <link rel="stylesheet" href="/app/static/Css/perfis.css">
+ <link rel="stylesheet" href="{{url_for('static', filename='Css/perifl.css' )}}">
 </head>
 <body>
    
@@ -31,7 +31,7 @@
     <h1>PERFIL</h1>
 
     <div class="campo">
-       <img src="/app/static/Img/icone-veterinario.png" width="120px">
+       <img src="{{url_for('static', filename='Img/icone-veterinario.png')}}" width="120px">
        </div>
     
 
@@ -115,9 +115,9 @@
    <button type="submit" id="salvar" class="salvar-btn" disabled>SALVAR</button>
     </form>
 
-    <script src="/app/static/Js/perfil-vet.js"></script>
+    <script src="{{url_for('static', filename='Js/perfil-vet.js' )}}"></script>
    
-    <a href="index.html" >  
+    <a href="{{url_for('index')}}"> 
         <button>SAIR</button>  
          </a>
 

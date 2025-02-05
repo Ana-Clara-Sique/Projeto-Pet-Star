@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder='app/templates' , static_folder='app/static')
+app = Flask(__name__,
+             template_folder='app/templates', 
+             static_folder='app/static')
 
 # Rota para pagina inicial(index.html)
 
@@ -18,7 +20,7 @@ def contato():
 
 @app.route('/servicos')
 def servicos():
-    return render_template('servicos.httml')
+    return render_template('servicos.html')
 
 # Rota para pagina de login(entrar.html)
 
@@ -33,8 +35,8 @@ def entrar():
 def cadastrar_veterinario():
     return render_template('cadastrar-veterinario.html')
 
-# rota para agina principal
 
+# rota para agina principal
 
 @app.route('/pagina-principal-vet')
 def pagina_principal_vet():
@@ -56,6 +58,10 @@ def pets():
 @app.route('/agendamentos')
 def agendamentos():
     return render_template('agendamentos.html')
+
+@app.route('/prontuarios')
+def prontuarios():
+    return render_template('prontuarios.html')
 
 
 

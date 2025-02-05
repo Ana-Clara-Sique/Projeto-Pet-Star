@@ -4,14 +4,16 @@
  <meta charset ="UTF-8">
  <meta name="viewport" content="width = device-width,initial-scale=1.0">
  <title>Star Pet</title>
- <link rel="stylesheet" href="/app/static/Css/cadastrar.css">
+ <link rel="stylesheet" href="{{url_for('static', filename='Css/cadastrar.css' )}}">
+ 
+
 </head>
 <body>
 
 <header>
    
-    <a href="index.html">
-        <img src="/app/static/Img/voltar.png" class="voltar"> 
+    <a href="{{url_for('index')}}">
+        <img src="{{url_for('static', filename='Img/voltar.png')}}" class=voltar> 
   
       </a>
 
@@ -22,20 +24,21 @@
     <div class="form-cadastro">
 
 
-        <form>
+        <form method="POST" action="{{ url_for('cadastrar_veterinario') }}">
+
             <h2>Cadastro de Veterinário</h2>
 
            <div class="form-info">
 
             <label for="campo-nome">Nome Completo:</label>
-            <input id="campo-nome" type="text" placeholder="digite seu usuário" required>
+            <input id="campo-nome" name="campo-nome" type="text" placeholder="digite seu usuário" required>
 
            </div><br><br>
     
     
             <div class="form-info">
                 <label for="campo-data">Data de nascimento:</label>
-                <input id="campo-data" type="date" placeholder="digite sua data de nascimento" required>
+                <input id="campo-data"name="campo-data" type="date" placeholder="digite sua data de nascimento" required>
 
             </div><br><br>
            
@@ -61,33 +64,32 @@
     
             <div class="form-info">
                 <label for="campo-telefone">Telefone:</label>
-                <input id="campo-telefone" type="tel" placeholder="(xx) xxxx-xxxx" required>
+                <input id="campo-telefone" name="campo-telefone" type="tel" placeholder="(xx) xxxx-xxxx" required>
 
             </div><br><br>
     
             <div class="form-info">  
                 <label for="campo-formacao">Formaçâo Acadêmica:</label>
-               <input id="campo-formacao" type="text" placeholder="digite sua formação acadêmica" required>
+               <input id="campo-formacao" name="campo-formacao"  type="text" placeholder="digite sua formação acadêmica" required>
             </div><br><br>
     
             <div class="form-info">  
     
                <label for="campo-especializacao">Especialização:</label>
-               <input id="campo-especializacao" type="text" placeholder="digite sua Especialização" required>
+               <input id="campo-especializacao" name="campo-especializacao" type="text" placeholder="digite sua Especialização" required>
             </div><br><br>
 
 
             <div class="form-info">  
                <label for="campo-senha">Senha:</label>
-               <input id="campo-senha" type="password" placeholder="Crie uma senha" required>
+               <input id="campo-senha" name="campo-senha" type="password" placeholder="Crie uma senha" required>
             </div><br><br>
 
             <div class="form-info">  
-                 <label for="confirme-senha"> Confirmar Senha:</labe>
-             <input id="confirme-senha" type="password" placeholder="Confirme sua senha" required>
-            </label>
+                <label for="confirme-senha">Confirmar Senha:</label>
+                <input id="confirme-senha"  name="confirme-senha" type="password" placeholder="Confirme sua senha" required>
             </div><br><br>
-
+            
 
             <div class="checkbox-container">
 
@@ -99,7 +101,7 @@
             </div>
 
             <h3>Observações:</h3>
-               <textarea rows="10" cols="30"></textarea> <br><br><br><br>
+               <textarea rows="10" cols="30" name="observacoes"></textarea> <br><br><br><br>
 
 
     

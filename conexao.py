@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, Date, Text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+import bcrypt #importa o bcrypt para verifiar a senha
 
 # URL de Conexão com o banco de dados MySQL no XAMPP
 DATABASE_URL = "mysql+pymysql://root:@localhost/petstar"  
@@ -36,8 +37,19 @@ Session = sessionmaker(bind=engine)
 # Função para cadastrar um usuário
 def cadastrar_veterinario(nome_completo, email, login, senha, data_nascimento, genero, telefone, formacao_academica, especializacao, observacoes):
     session = Session()  # Criando uma nova sessão
+
+ # Verificar se o login já existe
+    usuario_existente = session.query(Usuario).filter_by(login=login).first()
+    if usuario_existente:
+        session.close()
+        raise ValueError("O login já está em uso. Escolha outro.")
+
+# Criptografar a senha antes de salvar
+    senha_hash = bcrypt.hashpw(senha.encode('utf-8'), bcrypt.gensalt())
+
+    #Cria um novo usuario 
     novo_usuario = Usuario(
-        nome_completo=nome_completo, email=email, login=login, senha=senha,
+        nome_completo=nome_completo, email=email, login=login, senha=senha_hash,
         data_nascimento=data_nascimento, genero=genero, telefone=telefone,
         formacao_academica=formacao_academica, especializacao=especializacao,
         observacoes=observacoes
@@ -48,11 +60,14 @@ def cadastrar_veterinario(nome_completo, email, login, senha, data_nascimento, g
     print("Usuário cadastrado com sucesso!")
 
 # Função para verificar login e senha
-def verificar_login(login, senha):
+def verificar_login(login, senha=None):
     session = Session()  # Criando uma nova sessão
-    usuario = session.query(Usuario).filter_by(login=login, senha=senha).first()
+    usuario = session.query(Usuario).filter_by(login=login).first()
     session.close()  # Fecha a sessão após a consulta
+    
     if usuario:
-        return True
-    else:
-        return False
+        # Verifica se a senha fornecida corresponde à senha armazenada (hash)
+        if senha and bcrypt.checkpw(senha.encode('utf-8'), usuario.senha.encode('utf-8')):
+            return True
+    
+    return False

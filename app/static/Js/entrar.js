@@ -1,36 +1,19 @@
-document.getElementById("login-form").addEventListener("submit",function(event){
-    event.preventDefault();
+document.getElementById("login-form").addEventListener("submit", function(event){
+    // Remover o preventDefault, para permitir que o formulário seja enviado para o servidor
+    // event.preventDefault(); 
 
     const camponome = document.getElementById("campo-nome").value;
-
     const camposenha = document.getElementById("campo-senha").value;
-
     const erromensagem = document.getElementById("erro-mensagem");
 
-
+    // Limpar mensagem de erro antes de exibir novas mensagens
     erromensagem.textContent = "";
 
-
-   //definindo usuario e senha ficticios //
-
-   const validcamponome = "VivianClínicageral01";
-   const validcamposenha = "senha123";
-
-
-    if (camponome == "" || camposenha === "" ){
-        erromensagem.textContent ="Por favor , preencha todos os campos!";
+    // Verificar se os campos estão vazios
+    if (camponome == "" || camposenha === "") {
+        erromensagem.textContent = "Por favor, preencha todos os campos!";
         return;
     }
 
-    alert("login realizado com sucesso!");
-
-    if(camponome == validcamponome && camposenha ==validcamposenha)
-        {
-        window.location.href= "pagina-principal-vet.html";
-    
-    }  else{
-        erromensagem.textContent+"Usuario ou senha invalidos!";
-    }
-
-    document.getElementById(login-form).requestFullscreen();
+   
 });

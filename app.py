@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, redirect, session, url_for
+from flask import Flask, jsonify, render_template, request, redirect, session, url_for
 import bcrypt # pra importar o bcrypt para as senhas
-from conexao import cadastrar_veterinario, verificar_login # Importando as funções do banco de dados
+from conexao import Session, Usuario, cadastrar_veterinario, verificar_login # Importando as funções do banco de dados
 
 app = Flask(__name__,
              template_folder='app/templates', 
@@ -69,6 +69,24 @@ def entrar():
     return render_template('Entrar.html')
 
 
+
+# Endpoint para listar todos os veterinários
+@app.route('/api/veterinarios', methods=['GET'])
+def listar_veterinarios():
+    session = Session()
+    veterinarios = session.query(Usuario).all()  # Assume-se que a classe Usuario seja o modelo de Veterinário
+    session.close()
+    return jsonify([veterinario.as_dict() for veterinario in veterinarios])
+
+# Endpoint para obter detalhes de um veterinário pelo ID
+@app.route('/api/veterinarios/<int:id>', methods=['GET'])
+def obter_veterinario(id):
+    session = Session()
+    veterinario = session.query(Usuario).filter_by(id=id).first()  # Recupera pelo ID
+    session.close()
+    if veterinario:
+        return jsonify(veterinario.as_dict())
+    return jsonify({'error': 'Veterinário não encontrado'}), 404
 
 # Rota para a página principal do veterinário (pagina-principal-vet.html)
 @app.route('/pagina-principal-vet')  # Alteração aqui
@@ -151,6 +169,14 @@ def perfil_veterinario():
 def logout():
     session.pop('login', None)  # Remove o login da sessão
     return redirect(url_for('index'))  # Redireciona para a página inicial
+
+@app.route('/autor')
+def autor():
+    return jsonify({
+        'nome': 'Ana Clara',
+        'email': 'ana.siqueira62@aluno.ifce.edu.br',
+        'descricao': 'Projeto Pet Star - Responsavel pela entidade veterinario'
+    })
 
 
 if __name__ == '__main__':

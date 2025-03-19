@@ -59,6 +59,8 @@ def cadastrar_veterinario(nome_completo, email, login, senha, data_nascimento, g
     session.close()  # Fecha a sessão após o commit
     print("Usuário cadastrado com sucesso!")
 
+    
+
 # Função para verificar login e senha
 def verificar_login(login, senha=None):
     session = Session()  # Criando uma nova sessão

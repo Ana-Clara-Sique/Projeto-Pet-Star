@@ -158,12 +158,40 @@ def historico_de_servicos():
     return render_template('historico-de-serviços.html')
 
 # Rota para a página de perfil do veterinário (perfil-veterinario.html)
-@app.route('/perfil-veterinario')
+@app.route('/perfil-veterinario', methods=['GET', 'POST'])
 def perfil_veterinario():
-     if 'login' not in session:  # Verifica se o usuário não está logado
+    if 'login' not in session:  # Verifica se o usuário não está logado
         return redirect(url_for('entrar'))  # Redireciona para a página de login
-     return render_template('perfil-veterinario.html') #caso o usuario esteja logado,exibe o perfil
 
+    # Obtém o login do usuário da sessão
+    login_usuario = session['login']
+
+    # Busca os dados do usuário no banco de dados com base no login
+    session_db = Session()
+    usuario = session_db.query(Usuario).filter_by(login=login_usuario).first()
+    session_db.close()
+
+    if request.method == 'POST':
+        # Se o formulário for enviado, atualize os dados do usuário
+        usuario.nome_completo = request.form['nome']
+        usuario.data_nascimento = request.form['idade']
+        usuario.genero = request.form['genero']
+        usuario.email = request.form['email']
+        usuario.telefone = request.form['telefone']
+        usuario.formacao_academica = request.form['formacao']
+        usuario.especializacao = request.form['especializacao']
+        usuario.observacoes = request.form['observacoes']
+        usuario.senha = bcrypt.hashpw(request.form['senha'].encode('utf-8'), bcrypt.gensalt())
+        
+        session_db = Session()
+        session_db.commit()
+        session_db.close()
+        
+        # Redireciona para o perfil atualizado
+        return redirect(url_for('perfil_veterinario'))
+
+    # Caso contrário, exibe o formulário preenchido com os dados do usuário
+    return render_template('perfil-veterinario.html', usuario=usuario)
 # Rota para logout
 @app.route('/logout')
 def logout():

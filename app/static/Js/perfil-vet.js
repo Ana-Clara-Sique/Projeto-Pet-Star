@@ -5,14 +5,15 @@ function habilitarEdicao(campo) {
     //habilita o campo de entrada para a ediçao //
 
     campoInput.disabled = false;
-
+    document.getElementById("salvar").disabled = false;
      //troca o texto do botão pra salvar//
 
      botaoEditar.innerText = "SALVAR";
 
          //alterar o comportamento do botão pra salvar apos editar//
-
-     botaoEditar    .setAttribute("onclick", "salvarEdicao('"+campo+")");
+         botaoEditar.onclick = function() {
+            document.getElementById("form-perfil").submit();
+        };
 }
 
 function salvarEdicao(campo) {

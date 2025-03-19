@@ -8,113 +8,75 @@
 </head>
 <body>
    
-           <!--  Os dados presentes no perfil do veterinario
-
-            Nome Completo: ok
-            Data de nascimento: ok
-            Gênero: ok
-            E-mail:   ok 
-            Telefone:  ok
-            Formaçâo Acadêmica:   ok  
-            Especialização:  ok
-            Senha:  ok 
-            Endereço: ok
-
-
-            <img src="Img/icone-veterinario.png" alt="foto do icone-veterinario"> foto do vet
-           "botoes"
-                <button>Editar</button>  pra editar dados   ok 
-                <button>Sair</button>    pra sair do site star pet  ok 
-           --> 
-            
-  <form id="form-perfil">
+  <form id="form-perfil" method="POST">
     <h1>PERFIL</h1>
 
     <div class="campo">
-       <img src="{{url_for('static', filename='Img/icone-veterinario.png')}}" width="120px">
-       </div>
-    
+        <img src="{{url_for('static', filename='Img/icone-veterinario.png')}}" width="120px">
+    </div>
 
     <div class="campo">
-      <label for="nome">Nome Completo:</label>
-      <input type="text" id="nome" name="nome" value="Vivian Campos" disabled>
-      <button type="button" class="editar-btn" onclick="habilitarEdicao('nome')">EDITAR</button>
-  
-     </div>
-  
-   <div class="campo">
-      <label for="idade">Data De Nascimento:</label>
-      <input type="date " id="idade" name="idade" value="01-O5-1998" disabled>
-      <button type="button" class="editar-btn" onclick="habilitarEdicao('idade')">EDITAR</button>
-  
-     </div>
-  
-   
-  <div class="campo">
-    <label for="especie">Gênero:</label>
-    <input type="text" id="especie" name="especie" value="Feminino" disabled>
-    <button type="button" class="editar-btn" onclick="habilitarEdicao('genero')">EDITAR</button>
-  
-   </div>
-   
-   
-  <div class="campo">
-    <label for="raca">E-mail:</label>
-    <input type="email" id="email" name="email" value="drvivia@vet" disabled>
-    <button type="button" class="editar-btn" onclick="habilitarEdicao('e-mail')">EDITAR</button>
-  
-   </div>
-  
-   
-  <div class="campo">
-    <label for="situacao">Telefone:</label>
-    <input type="tel" id="telefone" name="telefone" value="telefone" disabled>
-    <button type="button" class="editar-btn" onclick="habilitarEdicao('telefone')">EDITAR</button>
-  
-   </div>
-  
-    
-  <div class="campo">
-    <label for="medicamentos">Formação Acadêmica:</label> <br>
-    <textarea id="formacao" name="formacao" rows="8" disabled> formada em medicina veterinaria na faculdade ... </textarea>
-    <button type="button" class="editar-btn" onclick="habilitarEdicao('formacao')">EDITAR</button>
-  
-   </div>
-  
-    
-  <div class="campo">
-    <label for="resumo-servico">Especializaçao:</label>  <br>
-    <textarea id="resumo-servico" name="resumo-servico" rows="8" disabled>Especialização em tosa e banho </textarea>
-    <button type="button" class="editar-btn" onclick="habilitarEdicao('resumo-servico')">EDITAR</button>
-  
-   </div>
-   
-   
-  <div class="campo">
-    <label for="Endereço"> Endereço:</label>  <br>
-    <textarea id="endereco" name="endereco" rows="8" disabled> Rua das flores 123 , casa 1119</textarea>
-    <button type="button" class="editar-btn" onclick="habilitarEdicao('endereco')">EDITAR</button>
-  
-   </div>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" value="{{ usuario.nome_completo }}" disabled>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('nome')">EDITAR</button>
+    </div>
 
-   <div class="campo">
-    <label for="especie">Senha:</label>
-    <input type="password" id="senha" name="senha" value="1234.." disabled>
-    <button type="button" class="editar-btn" onclick="habilitarEdicao('senha')">EDITAR</button>
-  
-   </div>
+    <div class="campo">
+        <label for="idade">Data De Nascimento:</label>
+        <input type="date" id="idade" name="idade" value="{{ usuario.data_nascimento.strftime('%Y-%m-%d') }}" disabled>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('idade')">EDITAR</button>
+    </div>
 
-   
-   <div class="campo">
-    <label for="especie">Confirmar Senha:</label>
-    <input type="password" id="confirmarsenha" name="confirmarsenha" value="1234.." disabled>
-    <button type="button" class="editar-btn" onclick="habilitarEdicao('confirmarsenha')">EDITAR</button>
-  
-   </div>
-   
-   <button type="submit" id="salvar" class="salvar-btn" disabled>SALVAR</button>
-    </form>
+    <div class="campo">
+        <label for="genero">Gênero:</label>
+        <input type="text" id="genero" name="genero" value="{{ usuario.genero }}" disabled>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('genero')">EDITAR</button>
+    </div>
 
+    <div class="campo">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" value="{{ usuario.email }}" disabled>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('email')">EDITAR</button>
+    </div>
+
+    <div class="campo">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" value="{{ usuario.telefone }}" disabled>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('telefone')">EDITAR</button>
+    </div>
+
+    <div class="campo">
+        <label for="formacao">Formação Acadêmica:</label>
+        <textarea id="formacao" name="formacao" rows="8" disabled>{{ usuario.formacao_academica }}</textarea>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('formacao')">EDITAR</button>
+    </div>
+
+    <div class="campo">
+        <label for="especializacao">Especialização:</label>
+        <textarea id="especializacao" name="especializacao" rows="8" disabled>{{ usuario.especializacao }}</textarea>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('especializacao')">EDITAR</button>
+    </div>
+
+    <div class="campo">
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes" rows="8" disabled>{{ usuario.observacoes }}</textarea>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('observacoes')">EDITAR</button>
+    </div>
+
+    <div class="campo">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" value="******" disabled>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('senha')">EDITAR</button>
+    </div>
+
+    <div class="campo">
+        <label for="confirmarsenha">Confirmar Senha:</label>
+        <input type="password" id="confirmarsenha" name="confirmarsenha" value="******" disabled>
+        <button type="button" class="editar-btn" onclick="habilitarEdicao('confirmarsenha')">EDITAR</button>
+    </div>
+
+    <button type="submit" id="salvar" class="salvar-btn" disabled>SALVAR</button>
+</form>
     <script src="{{url_for('static', filename='Js/perfil-vet.js' )}}"></script>
    
     <a href="{{url_for('logout')}}"> 
